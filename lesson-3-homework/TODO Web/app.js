@@ -1,10 +1,9 @@
-$(document).ready(function(){
-    $(".tasksBoard").show();
-})
-
 $("#submit").on("click", function(){
-    if ($(".tasksBoard").children().length == 2) var tmpid_count = 0;
-    else var tmpid_count = parseInt($(".tasksBoard ul:last-child button").attr("id").substring(5));
+    if ($(".tasksBoard ul").children().length == 0) {
+        var tmpid_count = 0;
+        $(".tasksBoard").show();
+    }
+    else var tmpid_count = parseInt($(".tasksBoard ul li:last-child button").attr("id").substring(5));
     var tmpid = "clear" + (tmpid_count + 1);
     var tmpcheckid = "check" + (tmpid_count + 1);
     $(".tasksBoard ul").append(`<li>
@@ -14,12 +13,13 @@ $("#submit").on("click", function(){
     </li>`);
     $("#" + tmpid).on("click", function(){
         $(this).parent().remove();
+        if ($(".tasksBoard ul").children().length == 0) $(".tasksBoard").hide();
     })
     $("#" + tmpcheckid).on("click", function(){
         if ($(this).is(":checked")) $(this).next().css("color", "red");
         else $(this).next().css("color", "black");
     })
-    $(".tasksBoard").show();
+    $("input[name=\"task\"]").val("");
 });
 
 $("#clear").on("click", function(){
@@ -28,4 +28,5 @@ $("#clear").on("click", function(){
         task = $(tasks[i]);
         if (task.find("*[type=\"checkbox\"]").is(":checked")) task.remove();
     }
+    if ($(".tasksBoard ul").children().length == 0) $(".tasksBoard").hide();
 });
