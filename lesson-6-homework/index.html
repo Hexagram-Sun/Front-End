@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <header><i class="fa fa-eercast fa-2x"> &nbsp;Catty Music</i></header>
+
+    <main>
+      <aside class="sm-hide">
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-home"></i>
+        <i class="fa fa-search"></i>
+        <i class="fa fa-volume-up"></i>
+        <i class="fa fa-user"></i>
+        <i class="fa fa-spotify"></i>
+        <i class="fa fa-cog"></i>
+        <i class="fa fa-soundcloud"></i>
+      </aside>
+
+      <section class="content">
+        <div class="music-head">
+          <img src="album.png" />
+          <section class="catty-music">
+            <div>
+              <p class="sm-text-center">Favorite Songs</p>
+              <p class="sm-hide">Eleven</p>
+              <p class="sm-hide">4 songs</p>
+            </div>
+            <div>
+              <i class="fa fa-play"> &nbsp;Play all</i>
+              <i class="fa fa-plus"> &nbsp;Add to</i>
+              <i class="fa fa-ellipsis-h">&nbsp;&nbsp;More</i>
+            </div>
+          </section>
+        </div>
+        <ul class="music-list">
+          <li class="song song-active">
+            <div class="No">1</div>
+            <p class="song-title" data-index="0">Sugar</p>
+            <p class="artist sm-hide">Terror Jr</p>
+            <p class="sm-text-right">3:12</p>
+            <p class="sm-hide">
+              <span class="catty-cloud">CATTY CLOUD SYNC</span>
+            </p>
+          </li>
+          <li class="song">
+            <div class="No">2</div>
+            <p class="song-title" data-index="1">Just dance</p>
+            <p class="artist sm-hide">Kaiyko</p>
+            <p class="sm-text-right">4:06</p>
+            <p class="sm-hide">
+              <span class="catty-cloud">CATTY CLOUD SYNC</span>
+            </p>
+          </li>
+          <li class="song">
+            <div class="No">3</div>
+            <p class="song-title" data-index="2">Almost back</p>
+            <p class="artist sm-hide">Kaskade</p>
+            <p class="sm-text-right">3:56</p>
+            <p class="sm-hide">
+              <span class="catty-cloud">CATTY CLOUD SYNC</span>
+            </p>
+          </li>
+          <li class="song">
+            <div class="No">4</div>
+            <p class="song-title" data-index="3">Losing me</p>
+            <p class="artist sm-hide">Gabrielle</p>
+            <p class="sm-text-right">3:34</p>
+            <p class="sm-hide">
+              <span class="catty-cloud">CATTY CLOUD SYNC</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div class="current-track">
+        <img class="cover" src="1.png" />
+        <div>
+          <p id="song-title">Sugar</p>
+          <p id="artist">Terror Jr</p>
+        </div>
+      </div>
+      <div class="track-control">
+        <i class="fa fa-step-backward"></i>
+        <i class="fa fa-pause" id="pauseBtn"></i>
+        <i class="fa fa-step-forward"></i>
+        <i class="fa fa-rotate-right sm-hide"></i>
+        <i class="fa fa-random sm-hide"></i>
+      </div>
+    </footer>
+  </body>
+</html>
